@@ -1,0 +1,141 @@
+.signContainer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background: var(--gray-400);
+    padding: 15vh 0;
+}
+
+.signOverlay {
+    margin-top: 15vh;
+    background-color: var(--white);
+    padding: .4rem 3rem;
+    border-radius: 15px;
+    box-shadow: .5px .5px 5px var(--gray-900);
+    width: 90%;
+    max-width: 650px;
+    max-height: 620px;
+    margin: 0 auto; 
+}
+
+.signContent {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.7rem;
+    gap: 1.2rem;
+}
+
+.signContent header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.signContainer header.loginHeader {
+    margin-top: calc(650px - 600px);
+}
+
+.signContent header h1 {
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+.signContent header div.signIcon {
+    font-size: 2.5rem;
+}
+
+.signContent form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+.signContent form input {
+    background-color: var(--white);
+    border-radius: 7px;
+    border: 2px solid var(--gray-400);
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: 500;
+    padding: .8rem .7rem;
+    margin-top: .3rem;
+}
+
+.signContent form button {
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    line-height: 1.4rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.signContent form button[title="Submit"] {
+    background-color: var(--gray-900);
+    color: var(--white);
+    transition: all 0.3s;
+}
+
+.signContent form button[title="Submit"]:hover {
+    background-color: var(--gray-800);
+}
+
+.signContent footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.signContent footer p {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    color: var(--gray-600)
+}
+
+.signLink {
+    display: block;
+    text-decoration: none;
+    color: var(--gray-900);
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.signLink:hover {
+    text-decoration: underline;
+}
+
+.signLink:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+
+@media (max-width: 768px) {
+    .signContainer {
+        padding: 5vh 0; 
+    }
+
+    .signOverlay {
+        width: 95%;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    .signContent header h1 {
+        font-size: 1.4rem;
+    }
+
+    .signContent form button {
+        font-size: 1.1rem;
+        padding: 0.7rem;
+    }
+}

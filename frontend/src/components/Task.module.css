@@ -1,0 +1,115 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--gray-100);
+    padding-bottom: 1rem;
+    transition: opacity 0.3s ease, all 0.5s ease;
+}
+
+.wrapper.completed {
+    opacity: 0.5;
+}
+
+.wrapper + .wrapper {
+    margin-top: .8rem;
+}
+
+.wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.wrapper:first-child {
+    margin-top: 1.6rem;
+}
+
+.checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2.1rem;
+    margin-right: 0.7rem;
+}
+
+.checkbox input[type="checkbox"] {
+    appearance: none;
+    border-radius: 8px;
+    border: 3px solid var(--gray-600);
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    cursor: pointer;
+  }
+  
+.checkbox input[type="checkbox"]:checked {
+    background-color: var(--gray-400);
+}
+
+.strikeThrough {
+    text-decoration: line-through;
+    color: var(--gray-600);
+}
+
+.checkbox .checkIcon {
+    font-size: 1.2rem;
+    color: transparent;
+    transition: color 0.3s ease;
+    position: absolute;
+    pointer-events: none;
+  }
+  
+.checkbox input[type="checkbox"]:checked + .checkIcon {
+    color: var(--white); 
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+.content > p {
+    display: inline;
+    font-size: 1.7rem;
+    line-height: 1.6rem;
+    margin: 0;
+}
+
+.content > time {
+    position: absolute;
+    top: 105%;
+    font-size: .7rem;
+    color: var(--red);
+}
+
+time.completed {
+    color: var(--gray-300)
+}
+
+.content .noteIcon {
+    justify-self: flex-start;
+    font-size: .8rem;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .1rem;
+}
+.buttons button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    padding: auto;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+}
+
+.buttons button:focus {
+    outline: 0;
+    box-shadow: 0;
+}
